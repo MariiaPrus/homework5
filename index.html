@@ -1,11 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
-    
-</body>
+  </head>
+  <body>
+    <script>
+      // task 1
+      for (let i = 20; i <= 30; i += 0.5) {
+        console.log(i);
+      }
+
+      // task 2
+
+      const kurs = 26;
+
+      for (let dolary = 10; dolary <= 100; dolary += 10) {
+        const hryvnia = dolary * kurs;
+
+        console.log(`${dolary} доларів = ${hryvnia} гривень`);
+      }
+
+      // task 3
+
+      const N = parseInt(prompt("Введіть ціле число N:"));
+
+      if (isNaN(N)) {
+        console.error("Ви ввели не число. Будь ласка, введіть ціле число.");
+      } else {
+        for (let i = 1; i <= 100; i++) {
+          const square = i * i;
+          if (square <= N) {
+            console.log(i);
+          }
+        }
+      }
+
+      //  task 4
+      function isPrime(num) {
+        if (num <= 1) {
+          return false;
+        }
+
+        for (let i = 2; i * i <= num; i++) {
+          if (num % i === 0) {
+            return false;
+          }
+        }
+
+        return true;
+      }
+
+      const number = parseInt(prompt("Введіть ціле число:"));
+
+      if (isPrime(number)) {
+        console.log(number + " є простим числом.");
+      } else {
+        console.log(number + " не є простим числом.");
+      }
+    </script>
+  </body>
 </html>
